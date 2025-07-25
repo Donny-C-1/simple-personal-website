@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./images/pattern1.png") repeat-x;
+}
