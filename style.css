@@ -2,6 +2,62 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-body: arial, helvetica, sans-serif;
+
+    --color-primary: #f9c51a;
+    --color-light: #fff;
+
+    /* * Sizes */
+    --font-small: .8rem;
+}
+
 body {
+    font-family: var(--font-body);
     background: url("./images/pattern1.png") repeat-x;
+}
+
+main {
+    margin-top: 3rem;
+    margin-inline: auto;
+    width: 30rem;
+}
+
+.tab-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: 1rem;
+
+    & a {
+        display: grid;
+        color: inherit;
+        padding: 1rem;
+    }
+    
+}
+
+.top-border {
+        width: 100%;
+        height: .375rem;
+        background-color: var(--color-primary);
+        border-radius: 1rem 1rem 0 0;
+    }
+
+.tabs-container {
+    position: relative;
+    height: 10rem;
+    border: .5rem solid var(--color-light);
+    border-top: 0;
+    border-radius: 0 0 .25rem .25rem;
+    background-color: var(--color-light);
+    box-shadow: 0 0 2px 1px inset rgba(0, 0, 0, .1), 0 2px 3px rgba(0, 0, 0, .1);
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: var(--font-small);
 }
