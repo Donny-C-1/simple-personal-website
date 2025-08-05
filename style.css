@@ -3,24 +3,43 @@
 }
 
 :root {
-    --font-body: arial, helvetica, sans-serif;
+    --font-body: Bahnschrift, arial, helvetica, sans-serif;
 
     --color-primary: #f9c51a;
+    --color-grey-300: #444;
+    --color-grey-500: #777;
+    --color-grey-700: #ebebeb;
     --color-light: #fff;
 
     /* * Sizes */
-    --font-small: .8rem;
+    --font-larger: 2rem;
+    --font-large: 1.2rem;
+    --font-normal: .9rem;
+    --font-small: .875rem;
+    --font-smaller: .75rem;
+
+    /* * Weights */
+    --font-bold: 600;
+    --font-light: 400;
 }
 
 body {
+    font-size: var(--font-normal);
     font-family: var(--font-body);
     background: url("./images/pattern1.png") repeat-x;
+    color: var(--color-grey-500);
+    font-weight: 100;
+    margin: 0;
+}
+
+p {
+    line-height: 1.25;
 }
 
 main {
     margin-top: 3rem;
     margin-inline: auto;
-    width: 30rem;
+    width: clamp(20rem, 90vw, 45rem);
 }
 
 .tab-links {
@@ -47,13 +66,17 @@ main {
 
 .tabs-container {
     position: relative;
-    height: 10rem;
+    min-height: 10rem;
     border: .5rem solid var(--color-light);
     border-top: 0;
     border-radius: 0 0 .25rem .25rem;
     background-color: var(--color-light);
     box-shadow: 0 0 2px 1px inset rgba(0, 0, 0, .1), 0 2px 3px rgba(0, 0, 0, .1);
     margin-bottom: 1rem;
+
+    & .wrapper {
+        padding: 2.25rem 2rem;
+    }
 
     & .tab {
         display: none;
@@ -64,8 +87,90 @@ main {
     }
 }
 
+
+/* #region Home */
+
+.tab.home {
+    & .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.25rem;
+    
+        @media screen and (min-width: 48rem) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    & .profile_pic_container {
+        flex-basis: 10rem;
+        display: grid;
+        place-items: center;
+
+        & img {
+            padding: .375rem;
+            border: 1px solid var(--color-grey-700);
+            border-radius: .25rem;
+        }
+    }
+
+    & .content {
+        flex: 1;
+        margin-bottom: .5rem;
+
+        & h1 {
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+            color: var(--color-grey-300);
+            margin-bottom: .25rem;
+        }
+
+        & .job_title {
+            font-size: var(--font-small);
+            margin: 0;
+        }
+
+        & hr {
+            border-width: 1px 0 0 0;
+            border-style: solid;
+            border-color: var(--color-grey-700);
+        }
+
+        & h2 {
+            font-size: var(--font-large);
+            font-weight: 100;
+            color: var(--color-grey-300);
+            margin: 1rem 0 .5rem;
+        }
+
+        & .skills_block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            gap: .5rem;
+
+            & li {
+                background-color: var(--color-grey-700);
+                font-size: var(--font-smaller);
+                color: var(--color-grey-300);
+                font-weight: var(--font-bold);
+                padding: .25rem .5rem;
+                border-radius: .25rem;
+            }
+        }
+    }
+}
+
+/* #endregion */
+
 footer {
     text-align: center;
     margin-bottom: 2rem;
     font-size: var(--font-small);
+    padding-inline: 1rem;
 }
