@@ -7,6 +7,8 @@
     <title>Simple</title>
     <meta name="author" content="Donny C" />
     <link rel="stylesheet" href="style.css">
+    <script src="./imagesloaded.pkgd.min.js"></script>
+    <script src="./isotope.pkgd.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -45,12 +47,13 @@
         <div class="top-border"></div>
         <div class="tabs-container">
             <div class="wrapper">
-                <article class="tab home active">
+                <section class="tab home active">
                     <div class="inner">
                         <div class="profile_pic_container">
                             <picture>
                                 <source media="(min-width: 48rem)" srcset="./images/img.png" />
-                                <img src="./images/img-470.png" alt="handshake" width="100%" height="auto"></picture>
+                                <img src="./images/img-470.png" alt="handshake" width="100%" height="auto">
+                            </picture>
                         </div>
                         <div class="content">
                             <h1 class="name">Donny C</h1>
@@ -74,10 +77,242 @@
                             </ul>
                         </div>
                     </div>
-                </article>
-                <div class="tab portfolio">Portfolio</div>
-                <div class="tab social">Social</div>
-                <div class="tab contact">Contact</div>
+                </section>
+
+                <section class="tab portfolio">
+                    <h1>My Works</h1>
+                    <hr />
+                    <div class="filter">
+                        <button>All</button>
+                        <button>Web Design</button>
+                        <button>Web Development</button>
+                        <button>Animation</button>
+                    </div>
+                    <hr />
+                    <p>There are many variations of passages of Lorem ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable</p>
+                    <ul>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum1.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum2.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum3.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum4.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum5.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum6.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum7.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum8.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div>
+                                    <img class="img" src="./images/thum9.jpg" alt="thumbnail 1" width="100%"
+                                        height="auto" />
+                                </div>
+                                <p class="portfolio_project_title">Project Title <span class="category">/ In
+                                        WebDesign</span></p>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                    suffered.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="tab social">
+                    <h1>My social network</h1>
+                    <hr />
+                    <ul class="social_links">
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/fb.png" width="30" height="30" alt="facebook icon" />
+                                <div>
+                                    <p class="media_name">Facebook</p>
+                                    <p class="media_url">facebook.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/tw.png" width="30" height="30" alt="x-icon" />
+                                <div>
+                                    <p class="media_name">X</p>
+                                    <p class="media_url">x.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/fl.png" alt="flickr-icon" width="30" height="30" />
+                                <div>
+                                    <p class="media_name">Flickr</p>
+                                    <p class="media_url">flickr.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/in.png" alt="linkedin-icon" width="30" height="30" />
+                                <div>
+                                    <p class="media_name">Linkedin</p>
+                                    <p class="media_url">linkedin.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/vm.png" alt="vimeo-icon" width="30" height="30" />
+                                <div>
+                                    <p class="media_name">Vimeo</p>
+                                    <p class="media_url">vimeo.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="thumbnail" href="#">
+                                <img src="./images/rss.png" alt="rss-feed-icon" width="30" height="30" />
+                                <div>
+                                    <p class="media_name">Vimeo</p>
+                                    <p class="media_url">vimeo.com/yourname</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <div class="footer">
+                        <div>
+                            <img src="./images/tw-bird.png" alt="twitter-bird" width="30" height="auto" />
+                            <p class="large">Latest Tweets</p>
+                        </div>
+                        <div>
+                            <p class="username">JohnDoe@samplemail.com</p>
+                            <p>The top graphic in this blog post says it all about icon fonts.</p>
+                        </div>
+                    </div>
+                    <hr />
+                </section>
+
+                <section class="tab contact">
+                    <h1>Contact</h1>
+                    <hr />
+                    <div class="flex_block">
+                        <div class="left_block">
+                            <p class="info">Feel Free to send me an email</p>
+                            <form action="#">
+                                <input type="text" name="name" id="form_name" placeholder="Your Name" />
+                                <input type="email" name="email" id="form_email" placeholder="Your Email" />
+                                <textarea name="message" id="form_message" rows="5"
+                                    placeholder="Your Message"></textarea>
+                                <button type="submit" class="submit">Send your email</button>
+                            </form>
+                        </div>
+                        <div class="right_block">
+                            <h2>Contact Information</h2>
+                            <a href="#"><img src="./images/map.png" alt="map" width="200" height="auto" class="img" /></a>
+                            <br/>
+                            <br/>
+                            <address>
+                                <p>The Compnay Name Inc. 1234 Street Road, City Name, IN 567 890</p>
+                                <hr/>
+                                <br/>
+                                <p><b>Telephone</b>: 0912345678</p>
+                                <p><b>Fax</b>: 0912345678</p>
+                                <p><b>Email</b>: johndoe@samplemail.com</p>
+                                <p><b>website</b>: http://sitename.com</p>
+                            </address>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

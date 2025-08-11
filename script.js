@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
     initTabs();
+    filterGrid();
 }
 
 function initTabs() {
@@ -28,4 +29,24 @@ function toggleTab() {
             tab.classList.remove("active");
         }
     }
+}
+
+function filterGrid() {
+    const imgLoad = imagesLoaded(document.querySelectorAll(".isotope img"));
+    let iso;
+    const options = {
+        itemSelector: ".isotope > *"
+    };
+    imgLoad.on("always", () => (iso = new Isotope(document.querySelector(".isotope"))));
+    const isotopeControlButtons = document.querySelectorAll(".isotope_controls button");
+    let prev = isotopeControlButtons[0];
+    isotopeControlButtons.forEach(
+        el =>
+            (el.onclick = () => {
+                prev.classList.toggle("active");
+                el.classList.toggle("active");
+                prev = el;
+                iso.arrange({ filter: el.dataset.filter === "all" ? "[data-product]" : `[data-product='${el.dataset.filter}']` });
+            })
+    );
 }
