@@ -37,7 +37,7 @@
         <header>
             <nav>
                 <ul class="tab-links">
-                    <li><a data-target="home" class="tablink" href="#home">Home</a></li>
+                    <li><a data-target="home" class="tablink active" href="#home">Home</a></li>
                     <li><a data-target="portfolio" class="tablink" href="#portfolio">Portfolio</a></li>
                     <li><a data-target="social" class="tablink" href="#social">Social</a></li>
                     <li><a data-target="contact" class="tablink" href="#contact">Contact</a></li>
@@ -47,6 +47,10 @@
         <div class="top-border"></div>
         <div class="tabs-container">
             <div class="wrapper">
+                <a class="download_link" href="#">
+                    <img src="./images/download.webp" alt="download-resume" width="100" height="auto" />
+                    <span>Download Resume</span>
+                </a>
                 <section class="tab home active">
                     <div class="inner">
                         <div class="profile_pic_container">
@@ -82,18 +86,18 @@
                 <section class="tab portfolio">
                     <h1>My Works</h1>
                     <hr />
-                    <div class="filter">
-                        <button>All</button>
-                        <button>Web Design</button>
-                        <button>Web Development</button>
-                        <button>Animation</button>
+                    <div class="filter filter_controls">
+                        <button class="active" data-filter="all">All</button>
+                        <button data-filter="web-design">Web Design</button>
+                        <button data-filter="web-development">Web Development</button>
+                        <button data-filter="animation">Animation</button>
                     </div>
                     <hr />
                     <p>There are many variations of passages of Lorem ipsum available, but the majority have suffered
                         alteration in some form, by injected humour, or randomised words which don't look even slightly
                         believable</p>
-                    <ul>
-                        <li>
+                    <ul class="filter_grid">
+                        <li data-category="web-design">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum1.jpg" alt="thumbnail 1" width="100%"
@@ -105,7 +109,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="web-development">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum2.jpg" alt="thumbnail 1" width="100%"
@@ -117,7 +121,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="animation">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum3.jpg" alt="thumbnail 1" width="100%"
@@ -129,7 +133,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="animation">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum4.jpg" alt="thumbnail 1" width="100%"
@@ -141,7 +145,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="web-development">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum5.jpg" alt="thumbnail 1" width="100%"
@@ -153,7 +157,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="animation">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum6.jpg" alt="thumbnail 1" width="100%"
@@ -165,7 +169,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="web-development">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum7.jpg" alt="thumbnail 1" width="100%"
@@ -177,7 +181,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="web-design">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum8.jpg" alt="thumbnail 1" width="100%"
@@ -189,7 +193,7 @@
                                     suffered.</p>
                             </article>
                         </li>
-                        <li>
+                        <li data-category="web-development">
                             <article>
                                 <div>
                                     <img class="img" src="./images/thum9.jpg" alt="thumbnail 1" width="100%"
@@ -298,7 +302,7 @@
                         </div>
                         <div class="right_block">
                             <h2>Contact Information</h2>
-                            <a href="#"><img src="./images/map.png" alt="map" width="200" height="auto" class="img" /></a>
+                            <a href="#"><img src="./images/map.png" alt="map" width="200" height="auto" class="img map" /></a>
                             <br/>
                             <br/>
                             <address>

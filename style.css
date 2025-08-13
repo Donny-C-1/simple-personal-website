@@ -5,7 +5,8 @@
 :root {
     --font-body: Bahnschrift, arial, helvetica, sans-serif;
 
-    --color-primary: #f9c51a;
+    /* --color-primary: #f9c51a; */
+    --color-primary: #cd0000;
     --color-grey-300: #444;
     --color-grey-500: #777;
     --color-grey-600: #ccc;
@@ -77,15 +78,32 @@ main {
 
 .tab-links {
     display: flex;
-    padding: 0;
+    flex-wrap: wrap;
+    padding: 1rem .5rem;
     margin: 0;
     list-style-type: none;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    @media screen and (min-width: 30rem) {
+        justify-content: flex-start;
+    }
 
     & a {
         display: grid;
         color: inherit;
-        padding: 1rem;
+        color: inherit;
+        text-decoration: none;
+        font-weight: var(--font-bold);
+        transition: .3s ease;
+
+        &.active {
+            color: var(--color-primary);
+        }
+
+        @media screen and (min-width: 30rem) {
+            padding: 0rem;
+        }
     }
 }
 
@@ -107,7 +125,48 @@ main {
     margin-bottom: 1rem;
 
     & .wrapper {
-        padding: 2.25rem 2rem;
+        padding: 1rem;
+
+        @media screen and (min-width: 30rem) {
+            padding: 2.25rem 2rem;
+        }
+    }
+
+    & .download_link {
+        display: block;
+        margin-inline: auto;
+        width: max-content;
+        padding: .75rem 1rem;
+        text-decoration: none;
+        border-radius: .25rem;
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        margin-bottom: 2rem;
+
+        & img {
+            display: none;
+        }
+
+        @media screen and (min-width: 30rem) {
+            position: absolute;
+            background-color: transparent;
+            padding: 0;
+            top: 0;
+            right: 0;
+            translate: 0 -50%;
+
+            & span {
+                display: none;
+            }
+
+            & img {
+                display: block;
+            }
+        }
+
+        & img {
+            width: 12rem;
+        }
     }
 
     & .tab {
@@ -221,27 +280,34 @@ main {
             padding: .5rem 1rem;
             margin-right: 1rem;
             margin-bottom: .5rem;
+            cursor: pointer;
+            transition: .3s ease;
+
+            &.active {
+                background-color: var(--color-primary);
+            }
         }
     }
 
     & ul {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr;
         padding: 0;
         list-style-type: none;
-        gap: 1rem;
+        gap: 2rem;
         margin-block: 1rem;
 
+        @media screen and (min-width: 30rem) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 48rem) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
         & li {
-            flex: auto;
-            width: 100%;
-
-            @media screen and (min-width: 30rem) {
-                width: 45%;
-            }
-
-            @media screen and (min-width: 48rem) {
-                width: 30%;
+            &.hidden {
+                display: none;
             }
 
             & .portfolio_project_title {
@@ -369,7 +435,7 @@ main {
         }
 
         & > * {
-            flex: 1 1 15rem;
+            flex: 1 1 10rem;
         }
 
         & :is(.info, h2) {
@@ -400,6 +466,11 @@ main {
 
         & address p {
             margin-block: .5rem;
+            word-break: break-all;
+        }
+
+        & .map {
+            max-width: 100%;
         }
     }
 }
