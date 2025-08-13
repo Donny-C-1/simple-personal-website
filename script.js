@@ -36,23 +36,6 @@ function toggleTab() {
 }
 
 function filterGrid() {
-    // const imgLoad = imagesLoaded(document.querySelectorAll(".isotope img"));
-    // let iso;
-    // const options = {
-    //     itemSelector: ".isotope > *"
-    // };
-    // imgLoad.on("always", () => (iso = new Isotope(document.querySelector(".isotope"))));
-    // const isotopeControlButtons = document.querySelectorAll(".isotope_controls button");
-    // let prev = isotopeControlButtons[0];
-    // isotopeControlButtons.forEach(
-    //     el =>
-    //         (el.onclick = () => {
-    //             prev.classList.toggle("active");
-    //             el.classList.toggle("active");
-    //             prev = el;
-    //             iso.arrange({ filter: el.dataset.filter === "all" ? "[data-category]" : `[data-category='${el.dataset.filter}']` });
-    //         })
-    // );
     const controls = document.querySelectorAll(".filter_controls button");
     let prevActiveControl = document.querySelector(".filter_controls button.active");
     const blocks = document.querySelectorAll(".filter_grid > *");
